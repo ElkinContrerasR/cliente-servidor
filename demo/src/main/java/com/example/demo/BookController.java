@@ -11,6 +11,10 @@ public class BookController {
 
     @Autowired
     private  BookService service;
-
+    
+    @GetMapping("/books")
+    public List<Book> getBook(){
+        return service.getBooks();
+    }
 
 }
